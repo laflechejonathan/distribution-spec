@@ -423,6 +423,8 @@ Manifest byte stream:
 
 The uploaded manifest MUST reference any blobs that make up the artifact.
 However, the list of blobs MAY be empty.
+
+The registry MUST store the manifest in the exact byte representation provided by the client.
 Upon a successful upload, the registry MUST return response code `201 Created`, and MUST have the following header:
 
 ```
