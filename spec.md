@@ -50,7 +50,8 @@ These headers are OPTIONAL and clients SHOULD NOT depend on them.
 
 #### Legacy Docker support error codes
 
-The client MAY encounter error codes targeting Docker schema1 manifests, such as `TAG_INVALID`, or `MANIFEST_UNVERIFIED`.
+The client MAY encounter error codes targeting Docker schema1 
+s, such as `TAG_INVALID`, or `MANIFEST_UNVERIFIED`.
 These error codes are OPTIONAL and clients SHOULD NOT depend on them.
 
 ### Definitions
@@ -423,6 +424,8 @@ Manifest byte stream:
 
 The uploaded manifest MUST reference any blobs that make up the artifact.
 However, the list of blobs MAY be empty.
+
+The registry MUST store the manifest in the exact byte representation provided by the client.
 Upon a successful upload, the registry MUST return response code `201 Created`, and MUST have the following header:
 
 ```
